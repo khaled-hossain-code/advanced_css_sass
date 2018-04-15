@@ -1,0 +1,43 @@
+Arguments: 
+  /home/khaled/.nvm/versions/node/v8.9.4/bin/node /home/khaled/.nvm/versions/node/v8.9.4/bin/yarn add node-sass
+
+PATH: 
+  /home/khaled/.nvm/versions/node/v8.9.4/bin:/home/khaled/bin:/home/khaled/.local/bin:/usr/local/bin:/home/khaled/bin:/home/khaled/.local/bin:/usr/local/bin:/home/khaled/bin:/home/khaled/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.4
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "sass": "node-sass sass/main.scss css/style.css -w"
+    },
+    "keywords": [],
+    "author": "khaled hossain",
+    "license": "ISC",
+    "dependencies": {
+      "node-sass": "^4.7.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com:443
+      at Object._errnoException (util.js:1022:11)
+      at errnoException (dns.js:55:15)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
