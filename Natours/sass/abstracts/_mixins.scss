@@ -12,3 +12,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/*
+phone 0 - 600px
+tab-port 600 - 900px
+tab-land 900 - 1200px
+[1200 - 1800] our normal style apply
+big-desktop 1800px+
+1em = 16px
+*/
+//we can apply same design to 3 types of break point
+@mixin respond($break-point1: none, $break-point2: none, $break-point3: none) {
+  @if $break-point1 == phone or $break-point2 == phone or $break-point3 == phone {
+    @media (max-width: 37.5em) { @content }; //600px
+  }
+  @if $break-point1 == tab-port or $break-point2 == tab-port or $break-point3 == tab-port {
+    @media (min-width: 37.51em) and (max-width: 56.25em) { @content }; //601px to 900px
+  }
+  @if $break-point1 == tab-land or $break-point2 == tab-land or $break-point3 == tab-land {
+    @media (min-width: 56.26em) and (max-width: 75em) { @content }; //901px to 1200px
+  }
+  @if $break-point1 == big-desktop or $break-point2 == big-desktop or $break-point2 == big-desktop {
+    @media (min-width: 112.5em) { @content }; //1800px
+  }
+}
