@@ -78,16 +78,13 @@
     top: -5px;
 
     &::after {
+      @include absCenter;
       content: "";
       height: 1.3rem;
       width: 1.3rem;
       background-color: $color-primary;
-      position: absolute;
       display: inline-block;
       border-radius: 50%;;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       opacity: 0;
       transition: all 0.2s;
     }
