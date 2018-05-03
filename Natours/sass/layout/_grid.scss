@@ -4,7 +4,7 @@
   margin-left: auto;
   margin-right: auto;
   
-  @include respond(tab-port) {
+  @include respond(tab-port, phone) {
     max-width: 50rem;
   }
 
