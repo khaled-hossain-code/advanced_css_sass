@@ -8,6 +8,11 @@
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   
   &--sub {
@@ -17,6 +22,10 @@
     letter-spacing: 1.74rem;
     animation: moveInRight 1s;
     margin-bottom: 6rem;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }  
 }
 
@@ -37,6 +46,14 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
+
+  @include respond (tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond (phone) {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-tertiary {
