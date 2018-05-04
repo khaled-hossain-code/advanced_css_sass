@@ -1,5 +1,5 @@
 Arguments: 
-  /home/khaled/.nvm/versions/node/v8.9.4/bin/node /home/khaled/.nvm/versions/node/v8.9.4/bin/yarn add node-sass
+  /home/khaled/.nvm/versions/node/v8.9.4/bin/node /home/khaled/.nvm/versions/node/v8.9.4/bin/yarn add npm-run-all --dev
 
 PATH: 
   /home/khaled/.nvm/versions/node/v8.9.4/bin:/home/khaled/bin:/home/khaled/.local/bin:/usr/local/bin:/home/khaled/bin:/home/khaled/.local/bin:/usr/local/bin:/home/khaled/bin:/home/khaled/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
@@ -20,13 +20,23 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "sass": "node-sass sass/main.scss css/style.css -w"
+      "watch:sass": "node-sass sass/main.scss css/style.css -w",
+      "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+      "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+      "prefix:css": "postcss --user autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+      "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+      "build:css": 
+  
     },
     "keywords": [],
     "author": "khaled hossain",
     "license": "ISC",
-    "dependencies": {
-      "node-sass": "^4.7.2"
+    "dependencies": {},
+    "devDependencies": {
+      "autoprefixer": "^8.4.1",
+      "concat": "^1.0.3",
+      "node-sass": "^4.8.3",
+      "postcss-cli": "^5.0.0"
     }
   }
 
@@ -37,7 +47,10 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com:443
-      at Object._errnoException (util.js:1022:11)
-      at errnoException (dns.js:55:15)
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+  SyntaxError: /home/khaled/work/advanced_css_sass/Natours/package.json: Unexpected token } in JSON at position 553
+      at JSON.parse (<anonymous>)
+      at /home/khaled/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:1036:59
+      at Generator.next (<anonymous>)
+      at step (/home/khaled/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /home/khaled/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:109:13
+      at <anonymous>
